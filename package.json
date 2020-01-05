@@ -1,0 +1,77 @@
+{
+  "name": "react-native-share-preview",
+  "version": "1.0.0",
+  "description": "Animated preview of a React Native page for sharing",
+  "author": "Thomas Gazzoni",
+  "license": "MIT",
+  "homepage": "https://github.com/thomasgazzoni/react-native-share-preview",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomasgazzoni/react-native-share-preview"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "react-native",
+    "react",
+    "native",
+    "share",
+    "screenshot",
+    "animated"
+  ],
+  "scripts": {
+    "lint:ts": "eslint \"src/**/*.{ts, tsx}\"",
+    "test:ts": "tsc --noEmit",
+    "test": "yarn test:ts && yarn lint:ts",
+    "release": "yarn semantic-release",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "react-native-reanimated": "1.4.0",
+    "react-native-view-shot": "3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.6",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@semantic-release/git": "^7.0.18",
+    "@types/react": "^16.9.16",
+    "@types/react-native": "^0.60.24",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "3.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "0.57.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-reanimated": "1.4.0",
+    "react-native-view-shot": "3.0.2",
+    "react-test-renderer": "16.8.6",
+    "semantic-release": "15.13.31",
+    "typescript": "3.7.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-reanimated": "*",
+    "react-native-view-shot": "*"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

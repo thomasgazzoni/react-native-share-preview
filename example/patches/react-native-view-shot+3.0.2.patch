@@ -1,0 +1,19 @@
+diff --git a/node_modules/react-native-view-shot/ios/RNViewShot.m b/node_modules/react-native-view-shot/ios/RNViewShot.m
+index 6947ae8..2e722c5 100644
+--- a/node_modules/react-native-view-shot/ios/RNViewShot.m
++++ b/node_modules/react-native-view-shot/ios/RNViewShot.m
+@@ -107,7 +107,14 @@ - (dispatch_queue_t)methodQueue
+ 
+     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+ 
++    if (snapshotContentContainer) {
++      [scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];
++    } else {
++      [rendered.layer renderInContext:UIGraphicsGetCurrentContext()];
++    }
++
+     success = [rendered drawViewHierarchyInRect:(CGRect){CGPointZero, size} afterScreenUpdates:YES];
++
+     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();
+ 
